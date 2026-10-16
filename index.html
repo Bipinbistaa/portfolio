@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bipin Bista | Computer Engineer: AI, Cybersecurity, Robotics & Software</title>
+<meta name="description" content="Bipin Bista is a Computer Engineer who builds practical systems at the intersection of AI, cybersecurity, robotics, and software engineering. Robotics Engineer at Six sense Technology and Vice President of ACES.">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Bipin Bista | Computer Engineer">
+<meta property="og:description" content="Practical systems at the intersection of AI, cybersecurity, robotics, and software engineering.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232b95f5'/%3E%3Cpath d='M20 18v28h14a9 9 0 0 0 5-16 8 8 0 0 0-5-12z M27 25h6a3 3 0 0 1 0 6h-6z M27 37h7a3.500 3.500 0 0 1 0 7h-7z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+/* apply saved theme before first paint (default: light) */
+(function () {
+  var t = 'light', q = location.search;
+  try { var s = localStorage.getItem('theme'); if (s === 'dark' || s === 'light') t = s; } catch (e) {}
+  var embed = /[?&]embed=1/.test(q);   /* only the copy shown on the laptop screen; normal iframe previews still get the laptop */
+  if (embed) { document.documentElement.classList.add('embed'); var m2 = q.match(/[?&]theme=(dark|light)/); if (m2) t = m2[1]; }
+  document.documentElement.setAttribute('data-theme', t);
+  var m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute('content', t === 'dark' ? '#070a10' : '#ffffff');
+})();
+</script>
+<script>
+/* resilience: mark JS as available, and if the 3D laptop has not started within 4.5s show the static fallback */
+(function () {
+  var r = document.documentElement; r.classList.add('js');
+  if (!r.classList.contains('embed')) setTimeout(function () { if (!r.classList.contains('lap-ready')) r.classList.add('lap-failed'); }, 4500);
+})();
+</script>
+<link rel="stylesheet" href="css/style.css">
+<noscript><style>#boot{display:none!important}.lap-fallback{display:block!important}.lap-scene,.lap-ctl,.lap-hint,.lap-glow{display:none!important}</style></noscript>
+
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+<div id="boot" aria-hidden="true"><div class="boot-in"><div><b>bipin.os</b> booting&hellip;</div><div>loading AI &middot; security &middot; robotics &middot; software</div><div class="boot-bar"><i></i></div></div></div>
+<div id="progress"></div>
+<div id="glow"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#hero" aria-label="Bipin Bista, home"><i>B</i><span>bipin<em>.</em>bista</span></a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#now">Now</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#connect">Connect</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" type="button" aria-label="Switch to dark theme" title="Switch theme">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="links"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="status"><span class="dot"></span>Robotics Engineer @ Six sense Technology</div>
+      <h1 class="name" aria-label="Bipin Bista"><span class="line" id="n1">Bipin</span><span class="line b" id="n2">Bista</span></h1>
+      <div class="typed" aria-hidden="true"><span class="pr">&gt;</span>building <span class="w" id="typed"></span><span class="caret"></span></div>
+      <p class="tagline">Computer Engineer who builds <b>practical systems</b> at the intersection of <b>AI, cybersecurity, robotics, and software engineering</b>.</p>
+      <div class="cta">
+        <a class="btn primary magnetic" href="#about">Meet me</a>
+        <a class="btn magnetic" href="#focus">What I build</a>
+        <a class="btn magnetic" href="https://www.linkedin.com/in/bipin-bista/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="domains" aria-hidden="true"><span>AI</span><span>Cybersecurity</span><span>Robotics</span><span>Software</span></div>
+    </div>
+
+    <div class="hero-visual">
+    <div class="stage-laptop" id="lapStage" tabindex="0" role="group" aria-label="Interactive 3D laptop showing this portfolio. Drag to rotate it, or use the arrow keys. Press Enter to use the screen, L to open or close the lid, F for the front view, S to spin.">
+      <img class="lap-fallback lt" src="assets/screen-light.jpg" alt="Preview of Bipin Bista's portfolio on a laptop screen" width="1280" height="800">
+      <img class="lap-fallback dk" src="assets/screen-dark.jpg" alt="Preview of Bipin Bista's portfolio on a laptop screen" width="1280" height="800">
+      <div class="lap-glow"></div>
+      <div class="lap-scene" id="lapScene"><div class="lap-floor"></div><div class="laptop" id="laptop"></div></div>
+      <button type="button" class="lap-open" id="lapOpen" aria-label="Open the laptop lid">Tap to open</button>
+      <button type="button" class="lap-exit" id="lapExit">Exit screen <kbd>Esc</kbd></button>
+      <div class="lap-hint" id="lapHint" aria-hidden="true">drag to rotate &middot; click the screen to explore</div>
+      <span class="sr-only" id="lapStatus" role="status" aria-live="polite"></span>
+      <div class="lap-ctl">
+        <button type="button" id="lapL" aria-label="Rotate left" title="Rotate left"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/></svg></button>
+        <button type="button" id="lapFront" title="Face the screen (F)">Front</button>
+        <button type="button" id="lapLid" aria-pressed="true" title="Open or close the lid (L)">Lid</button>
+        <button type="button" id="lapSpin" aria-pressed="false" title="Spin continuously (S)">360&deg; spin</button>
+        <button type="button" id="lapR" aria-label="Rotate right" title="Rotate right"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-3-6.2M20 4v4h-4"/></svg></button>
+      </div>
+    </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#about" aria-label="Scroll down to About"><span></span></a>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow rv">01 / about</div>
+    <h2 class="rv" data-scramble>Hi, I&rsquo;m Bipin<span class="hl">.</span></h2>
+    <div class="about">
+      <div class="rv">
+        <div class="id-card tilt">
+          <div class="id-photo">
+            <img src="assets/bipin-real.jpg" alt="Bipin Bista standing under a large tree, wearing a white shirt and black trousers" width="720" height="840" loading="lazy">
+            <div class="beam"></div><span class="brk a"></span><span class="brk b"></span><span class="brk c"></span><span class="brk d"></span>
+          </div>
+          <div class="id-meta"><span>ID <b>BB-01</b></span><span class="ok">verified human</span></div>
+          <span class="float-tag t1">Robotics</span><span class="float-tag t2">&lt;/&gt; code</span><span class="float-tag t3">Security</span>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="term" id="term">
+          <div class="term-bar"><i></i><i></i><i></i><span>bipin@kathmandu:~</span></div>
+          <pre id="termOut" aria-label="whoami: Bipin Bista. role: Computer Engineer. focus: AI, cybersecurity, robotics, software. status: building."></pre>
+        </div>
+        <div class="about-text">
+          <p class="big">A Computer Engineer who builds <mark>practical systems</mark> at the intersection of AI, cybersecurity, robotics, and software engineering.</p>
+          <p>I like the point where a model, a sensor, a motor, and a secure connection all have to agree with each other. That is where ideas stop being demos and start being <b>systems that actually work</b>.</p>
+          <p>I study Computer Engineering at Tribhuvan University, IOE, Purwanchal Campus, work as a <b>Robotics Engineer at Six sense Technology</b>, teach robotics at Utthan Robotics Lab, and serve as <b>Vice President of ACES</b>. Mentoring and communication are as much a part of engineering for me as code and circuits.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><b data-count="4">0</b><span>roles running side by side</span></div>
+          <div class="stat"><b data-count="2" data-suffix="+">0</b><span>years teaching robotics</span></div>
+          <div class="stat"><b data-count="4">0</b><span>engineering fields, one goal</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="focus" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="eyebrow rv">02 / focus</div>
+    <h2 class="rv" data-scramble>Four fields, one toolbox<span class="hl">.</span></h2>
+    <p class="lede rv">I do not treat these as separate worlds. The best systems borrow from all four.</p>
+    <div class="focus">
+      <article class="fcard tilt rv">
+        <div class="art"><svg viewBox="0 0 200 120" aria-hidden="true"><g class="nn" id="nn"></g></svg></div>
+        <div class="no">01 // AI</div><h3>Artificial Intelligence</h3>
+        <p>Turning data into decisions. I explore machine learning and intelligent automation that work on real inputs and solve practical problems.</p>
+        <div class="tags"><span>Machine learning</span><span>Automation</span><span>Applied AI</span></div>
+      </article>
+      <article class="fcard tilt rv">
+        <div class="art"><svg viewBox="0 0 200 120" aria-hidden="true">
+          <defs><clipPath id="shc"><path d="M100 10 L152 30 V58 C152 84 130 100 100 112 C70 100 48 84 48 58 V30 Z"/></clipPath></defs>
+          <path d="M100 10 L152 30 V58 C152 84 130 100 100 112 C70 100 48 84 48 58 V30 Z" fill="#eef7ff" stroke="#2b95f5" stroke-width="3" stroke-linejoin="round"/>
+          <g clip-path="url(#shc)"><g class="sh-scan"><rect x="40" y="58" width="120" height="14" fill="#58afff" opacity=".28"/><rect x="40" y="64" width="120" height="2" fill="#2b95f5"/></g></g>
+          <g class="lockk"><rect x="84" y="62" width="32" height="26" rx="5" fill="#2b95f5"/><path d="M90 62V54a10 10 0 0 1 20 0v8" fill="none" stroke="#2b95f5" stroke-width="4" stroke-linecap="round"/><circle cx="100" cy="73" r="3.4" fill="#fff"/><rect x="98.500" y="74" width="3" height="8" rx="1.500" fill="#fff"/></g>
+        </svg></div>
+        <div class="no">02 // SECURITY</div><h3>Cybersecurity</h3>
+        <p>Secure by design. I think about how systems can fail or be attacked, so what I build is safer from the first line.</p>
+        <div class="tags"><span>Secure design</span><span>Threat thinking</span><span>Network safety</span></div>
+      </article>
+      <article class="fcard tilt rv">
+        <div class="art"><svg viewBox="0 -16 200 138" aria-hidden="true">
+          <path d="M70 116h60l-8-12H78z" fill="#dcedff" stroke="#2b95f5" stroke-width="2.500" stroke-linejoin="round"/>
+          <g class="a1"><rect x="93" y="50" width="14" height="58" rx="7" fill="#bfe0ff" stroke="#2b95f5" stroke-width="2.500"/>
+            <g class="a2"><rect x="95" y="10" width="10" height="46" rx="5" fill="#eef7ff" stroke="#2b95f5" stroke-width="2.500"/>
+              <g class="a3"><path d="M95 12 L90 0 M105 12 L110 0" stroke="#1478d8" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="12" r="5.500" fill="#fff" stroke="#1478d8" stroke-width="2.500"/></g>
+              <circle cx="100" cy="52" r="6" fill="#fff" stroke="#1478d8" stroke-width="2.500"/></g>
+            <circle cx="100" cy="104" r="7" fill="#fff" stroke="#1478d8" stroke-width="2.500"/></g>
+        </svg></div>
+        <div class="no">03 // ROBOTICS</div><h3>Robotics</h3>
+        <p>My daily work. Building and teaching robots, from sensors and motors to the control logic that ties them together.</p>
+        <div class="tags"><span>Sensors &amp; actuators</span><span>Control logic</span><span>Hands-on training</span></div>
+      </article>
+      <article class="fcard tilt rv">
+        <div class="art"><svg viewBox="0 0 200 120" aria-hidden="true">
+          <rect x="22" y="14" width="156" height="94" rx="10" fill="#fff" stroke="#2b95f5" stroke-width="2.500"/>
+          <path d="M22 34h156" stroke="#bfe0ff" stroke-width="2"/><circle cx="36" cy="24" r="3.200" fill="#bfe0ff"/><circle cx="47" cy="24" r="3.200" fill="#8fc9ff"/><circle cx="58" cy="24" r="3.200" fill="#58afff"/>
+          <rect class="cl" x="36" y="46" width="70" height="7" rx="3.500" fill="#2b95f5"/>
+          <rect class="cl" x="48" y="60" width="96" height="7" rx="3.500" fill="#8fc9ff"/>
+          <rect class="cl" x="48" y="74" width="58" height="7" rx="3.500" fill="#58afff"/>
+          <rect class="cl" x="36" y="88" width="82" height="7" rx="3.500" fill="#bfe0ff"/>
+          <rect class="cur" x="124" y="86" width="7" height="12" fill="#1478d8"/>
+        </svg></div>
+        <div class="no">04 // SOFTWARE</div><h3>Software Engineering</h3>
+        <p>The glue. Clean, maintainable code that connects models, hardware, and people, built to be used and not just shown.</p>
+        <div class="tags"><span>Clean code</span><span>Systems thinking</span><span>Problem solving</span></div>
+      </article>
+    </div>
+
+    <h3 class="rv" style="margin-top:84px;font-size:clamp(1.4rem,3vw,1.9rem);text-align:center">How the four fit into one system</h3>
+    <div class="loop rv">
+      <div class="lnode"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.600 5.600l2 2M16.400 16.400l2 2M5.600 18.400l2-2M16.400 7.600l2-2"/></svg></div><h4>Sense</h4><p>Robotics reads the world through sensors.</p></div>
+      <div class="lnode"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 6l8 6M8 18l8-6"/></svg></div><h4>Think</h4><p>AI turns raw signals into decisions.</p></div>
+      <div class="lnode"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Protect</h4><p>Security keeps the whole loop trustworthy.</p></div>
+      <div class="lnode"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><h4>Ship</h4><p>Software turns it into something people use.</p></div>
+    </div>
+    <p class="loop-note rv">sense &rarr; think &rarr; protect &rarr; ship &rarr; repeat</p>
+  </div>
+</section>
+
+<section id="now">
+  <div class="wrap">
+    <div class="eyebrow rv">03 / now</div>
+    <h2 class="rv" data-scramble>Right now, I wear four hats<span class="hl">.</span></h2>
+    <p class="lede rv">Studying, building, teaching, and leading, all at the same time.</p>
+    <div class="now-grid">
+      <div class="tile hero-tile tilt rv"><span class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="10" rx="2"/><path d="M12 8V4M9 13h.01M15 13h.01M3 12v3M21 12v3"/></svg></span><h3>Robotics Engineer</h3><p>Six sense Technology Pvt Ltd. Full-time, on-site in Kathmandu.</p><span class="pill">May 2026 - Present</span></div>
+      <div class="tile tilt rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.500V16c0 1.200 2.200 2.500 5 2.500s5-1.300 5-2.500v-4.500"/></svg></span><h3>Computer Engineering undergraduate</h3><p>Tribhuvan University, IOE, Purwanchal Campus.</p><span class="pill">2024 - Present</span></div>
+      <div class="tile tilt rv"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.300 2.700-5.500 6-5.500s6 2.200 6 5.500"/><path d="M16 5.500a3 3 0 0 1 0 5M18 14.800c1.800.8 3 2.500 3 5.200"/></svg></span><h3>Vice President</h3><p>Association of Computer Engineering Students (ACES).</p><span class="pill">Feb 2026 - Present</span></div>
+      <div class="tile tilt rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 21h8M12 16v5"/><path d="M9 10l2 2 4-4"/></svg></span><h3>Robotics Instructor</h3><p>Utthan Robotics Lab Pvt. Ltd.</p><span class="pill">Oct 2024 - Present</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="journey" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="eyebrow rv">04 / journey</div>
+    <h2 class="rv" data-scramble>From first semester to the robotics floor<span class="hl">.</span></h2>
+    <p class="lede rv">Scroll to follow the path. Each step built on the one before it.</p>
+    <div class="journey">
+      <div>
+        <div class="tl" id="tl">
+          <div class="fill" id="fill"></div>
+          <div class="step rv"><span class="node"></span><time>2024</time><h3>Started Bachelor of Engineering</h3><p>Computer Engineering at Tribhuvan University, IOE, Purwanchal Campus.</p></div>
+          <div class="step rv"><span class="node"></span><time>Oct 2024</time><h3>Robotics Instructor</h3><p>Utthan Robotics Lab Pvt. Ltd.</p></div>
+          <div class="step rv"><span class="node"></span><time>Jan 2025</time><h3>Executive Member</h3><p>Association of Computer Engineering Students (ACES).</p></div>
+          <div class="step rv"><span class="node"></span><time>Feb 2026</time><h3>Vice President</h3><p>Association of Computer Engineering Students (ACES).</p></div>
+          <div class="step rv now"><span class="node"></span><time>May 2026</time><h3>Robotics Engineer</h3><p>Six sense Technology Pvt Ltd, Kathmandu.</p></div>
+        </div>
+        <div class="tl-end rv">Today: Computer Engineering undergraduate, Robotics Engineer, and ACES Vice President.</div>
+      </div>
+      <div class="parallel rv" id="parallel">
+        <h3>Everything ran side by side</h3>
+        <p>Study and work did not take turns. They overlapped.</p>
+        <div class="axis" aria-hidden="true"><span style="left:0">2024</span><span style="left:33.333%">2025</span><span style="left:66.666%">2026</span></div>
+        <div class="rows">
+          <div class="row"><div class="lab"><span>Computer Engineering</span><em>2024 - Present</em></div><div class="bar-bg"><div class="bar d1 pulse" style="left:0;width:93%"></div></div></div>
+          <div class="row"><div class="lab"><span>Robotics Instructor</span><em>Oct 2024 - Present</em></div><div class="bar-bg"><div class="bar d2 pulse" style="left:25%;width:68%"></div></div></div>
+          <div class="row"><div class="lab"><span>ACES</span><em>Jan 2025 - Present</em></div><div class="bar-bg"><div class="bar d3" style="left:33.3%;width:36%"></div><div class="bar alt d3 pulse" style="left:69.4%;width:23.6%"></div></div></div>
+          <div class="row"><div class="lab"><span>Robotics Engineer</span><em>May 2026 - Present</em></div><div class="bar-bg"><div class="bar d4 pulse" style="left:77.7%;width:15.3%"></div></div></div>
+        </div>
+        <div class="aces">
+          <h4>Growth inside ACES</h4>
+          <div class="prog">
+            <div class="role"><b>Executive Member</b><small>Jan 2025 - Feb 2026</small></div>
+            <div class="chev" aria-hidden="true">&#10140;</div>
+            <div class="role vp"><b>Vice President</b><small>Feb 2026 - Present</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow rv">05 / experience</div>
+    <h2 class="rv" data-scramble>Experience<span class="hl">.</span></h2>
+    <p class="lede rv">Professional engineering, teaching, and leadership.</p>
+    <div class="work">
+      <article class="card rv">
+        <div><div class="when">May 2026 - Present</div><div class="where">Kathmandu, Bagmati, Nepal<br>On-site, Full-time</div></div>
+        <div><h3>Robotics Engineer</h3><p class="org">Six sense Technology Pvt Ltd</p><p>My current professional role, working in robotics alongside my undergraduate degree.</p></div>
+      </article>
+      <article class="card rv">
+        <div><div class="when">Oct 2024 - Present</div><div class="where">Utthan Robotics Lab Pvt. Ltd.</div></div>
+        <div><h3>Robotics Instructor</h3><p class="org">Utthan Robotics Lab Pvt. Ltd.</p><p>Teaching robotics, where engineering practice meets mentoring and communication.</p>
+          <div class="tags"><span>Robotics</span><span>Technical training</span><span>Mentoring</span><span>Communication</span><span>Practical engineering</span><span>Student development</span></div></div>
+      </article>
+      <article class="card rv">
+        <div><div class="when">Jan 2025 - Present</div><div class="where">Executive Member to Vice President</div></div>
+        <div><h3>Vice President</h3><p class="org">Association of Computer Engineering Students (ACES)</p><p>Joined ACES as an Executive Member in January 2025 and became Vice President in February 2026.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="education" style="background:var(--soft)">
+  <div class="wrap">
+    <div class="eyebrow rv">06 / education</div>
+    <h2 class="rv" data-scramble>Education<span class="hl">.</span></h2>
+    <div class="edu">
+      <div class="big rv"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-5 9 5-9 5z"/><path d="M7 11.500V16c0 1.200 2.200 2.500 5 2.500s5-1.300 5-2.500v-4.500"/></svg></span><h3>Bachelor of Engineering, Computer Engineering</h3><p>Tribhuvan University, Institute of Engineering (IOE), Purwanchal Campus</p><span class="yr">2024 - Present</span></div>
+      <div class="pos rv"><h3>Learning and working at once</h3><p>My degree is not on pause while I work. Classroom theory and robotics practice feed each other every week.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="connect">
+  <div class="wrap">
+    <div class="eyebrow rv" style="justify-content:center">07 / connect</div>
+    <h2 class="rv" data-scramble>Let&rsquo;s build something practical<span class="hl">.</span></h2>
+    <p class="lede rv">Find me on these platforms.</p>
+    <div class="socials rv">
+      <a class="soc" href="https://www.linkedin.com/in/bipin-bista/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.9-2 3.9-2 4.1 0 4.7 2.7 4.7 6.1v5.3h-4v-4.7c0-1.1 0-2.6-1.6-2.6s-1.8 1.2-1.8 2.5v4.8h-4z"/></svg>LinkedIn</a>
+      <a class="soc" href="https://www.facebook.com/bipin.bista.336" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.500 21v-8h2.700l.5-3.200h-3.200V7.800c0-.9.400-1.700 1.800-1.700h1.500V3.300S15.500 3 14.300 3c-2.600 0-4.100 1.500-4.100 4.300v2.500H7.500V13h2.700v8z"/></svg>Facebook</a>
+      <a class="soc" href="https://www.instagram.com/bipin_bista_/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.500 2h9A5.500 5.500 0 0 1 22 7.500v9a5.500 5.500 0 0 1-5.500 5.500h-9A5.500 5.500 0 0 1 2 16.500v-9A5.500 5.500 0 0 1 7.500 2zm0 2A3.500 3.500 0 0 0 4 7.500v9A3.500 3.500 0 0 0 7.500 20h9a3.500 3.500 0 0 0 3.500-3.500v-9A3.500 3.500 0 0 0 16.500 4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.300-3.300a1.200 1.200 0 1 1 0 2.400 1.200 1.200 0 0 1 0-2.400z"/></svg>Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr">2026</span> Bipin Bista &middot; bipinbista01.com.np &middot; <span style="color:var(--sky-500)">&lt;built with care/&gt;</span></div></footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script src="js/laptop.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
