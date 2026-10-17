@@ -197,7 +197,8 @@
   }
   function netLoop() { if (heroVisible) drawNet(); requestAnimationFrame(netLoop); }
   sizeNet(); drawNet();
-  window.addEventListener('resize', function () { sizeNet(); drawNet(); });
+  var lastW = window.innerWidth;
+  window.addEventListener('resize', function () { if (window.innerWidth === lastW) return; lastW = window.innerWidth; sizeNet(); drawNet(); });   /* ignore mobile address-bar height changes while scrolling */
   new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; }).observe($('hero'));
   $('hero').addEventListener('pointermove', function (e) { var r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
   $('hero').addEventListener('pointerleave', function () { mouse.x = mouse.y = -999; });

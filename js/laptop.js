@@ -77,6 +77,7 @@
     /* ---- live preview iframe: fades in only once the embedded page says it is ready ---- */
     function ensureFrame() {
       if (frame) return;
+      if (coarse || window.innerWidth < 820) return;   /* phones: skip the second full-page copy (memory), keep the screenshot */
       frame = el('iframe', '', scale);
       frame.title = 'Live preview of this portfolio on the laptop screen';
       frame.setAttribute('tabindex', '-1'); frame.setAttribute('aria-hidden', 'true'); frame.setAttribute('loading', 'eager');
