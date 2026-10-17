@@ -69,7 +69,8 @@
     secs.forEach(function (s) { if (s.getBoundingClientRect().top < vh * 0.4) cur = s.id; });
     navLinks.forEach(function (a) { a.classList.toggle('on', a.getAttribute('href') === '#' + cur); });
   }
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  var scTick = false;
+  window.addEventListener('scroll', function () { if (scTick) return; scTick = true; requestAnimationFrame(function () { scTick = false; onScroll(); }); }, { passive: true }); onScroll();
 
   /* text scramble on headings */
   var GL = 'ABCDEF0123456789<>/{}[]=+*#';
@@ -223,7 +224,8 @@
     document.dispatchEvent(new CustomEvent('themechange', { detail: t }));
   }
   /* when embedded inside the laptop screen, follow the parent's theme */
-  window.addEventListener('message', function (e) { var d = e.data; if (d && d.type === 'bb-scroll' && typeof d.dy === 'number') { window.scrollBy(0, d.dy); return; } if (d && d.type === 'bb-theme' && (d.theme === 'dark' || d.theme === 'light')) applyTheme(d.theme, false); });
+  window.addEventListener('message', function (e) { if (!isEmbed || e.source !== window.parent) return;   /* only the parent page may drive the embedded copy */
+    var d = e.data; if (d && d.type === 'bb-scroll' && typeof d.dy === 'number') { window.scrollBy(0, d.dy); return; } if (d && d.type === 'bb-theme' && (d.theme === 'dark' || d.theme === 'light')) applyTheme(d.theme, false); });
   applyTheme(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light', false);
   tbtn.addEventListener('click', function () { applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true); });
 })();

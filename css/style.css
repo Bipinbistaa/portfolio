@@ -23,8 +23,8 @@
   color-scheme: light;
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; overscroll-behavior-y: none; }   /* stops mobile pull-to-refresh from reloading the page */
+body { overscroll-behavior-y: none; margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 body::before { /* blueprint grid */
   content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
   background-image: linear-gradient(var(--sky-100) 1px, transparent 1px), linear-gradient(90deg, var(--sky-100) 1px, transparent 1px);
@@ -465,3 +465,9 @@ html.past-hero .scroll-cue { opacity: 0; pointer-events: none; }
 .to-top:hover { border-color: var(--sky-400); }
 .to-top svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 html.embed .scroll-cue, html.embed .to-top, html.embed .skip { display: none !important; }
+
+/* phones: drop per-card GPU layers (memory) */
+@media (pointer: coarse), (max-width: 760px) { .fcard { will-change: auto; } }
+
+/* tile icon float (the 'bob' animation was referenced but never defined) */
+@keyframes bob { 50% { transform: translateY(-4px); } }

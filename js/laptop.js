@@ -100,7 +100,7 @@
     function norm(a) { a = a % 360; if (a > 180) a -= 360; if (a <= -180) a += 360; return a; }
     function poke() { idleSince = performance.now(); }
     function touchedOnce() { stage.classList.add('touched'); }
-    if (coarse && hintEl) hintEl.innerHTML = 'swipe to rotate &middot; tap the screen to explore';
+    if (coarse && hintEl) hintEl.innerHTML = 'swipe to rotate &middot; tap to open or close the lid';
     lidBtn.setAttribute('aria-pressed', String(openGoal > 0));
 
     function worldNormal(n, isLid) {
