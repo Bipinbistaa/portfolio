@@ -38,10 +38,12 @@
   var tEl = $('typed'), pi = 0, ci = 0, del = false;
   function tick() {
     var p = phrases[pi];
-    if (!del) { ci++; if (ci === p.length) { del = true; return setTimeout(tick, 1600); } }
-    else { ci--; if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; } }
+    ci += del ? -1 : 1;
     tEl.textContent = p.slice(0, ci);
-    setTimeout(tick, del ? 38 : 70);
+    var delay = del ? 38 : 70;
+    if (!del && ci === p.length) { del = true; delay = 1600; }
+    else if (del && ci === 0) { del = false; pi = (pi + 1) % phrases.length; delay = 350; }
+    setTimeout(tick, delay);
   }
   if (reduce) tEl.textContent = phrases[0]; else setTimeout(tick, 2300);
 
